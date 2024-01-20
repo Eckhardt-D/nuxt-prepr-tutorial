@@ -1,0 +1,15 @@
+query GetBlogs($skip: Int, $limit: Int) {
+  Blogs(skip: $skip, limit: $limit) {
+    items {
+      _slug
+      name
+      date
+      cover_image {
+        url
+      }
+      short_description
+      article
+    }
+    total
+  }
+}

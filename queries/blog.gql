@@ -1,0 +1,21 @@
+query GetBlog($slug: String) {
+	Blog (slug: $slug) { 
+		_id
+		name
+		_slug
+		date
+		cover_image { 
+			_id
+			url
+		}
+		short_description
+		meta_description
+		categories { 
+			__typename
+		}
+		authors { 
+			__typename
+		}
+		article
+	}
+}
